@@ -3,12 +3,7 @@ define(['jquery', 'vex', 'vexDialog', 'animateCSS'], function($, vex, vexDialog)
   var id = $('#delete-file').data('id');
 
   $('#delete-file').click(function() {
-    vex.defaultOptions.className = 'vex-theme-os';
-
-    vexDialog.confirm({
-      message: 'Are you sure you want to delete this file?',
-      callback: function(value) {
-        if (value) {
+    vex.defaultOptions.cla
           $.ajax({
             type: 'DELETE',
             url: '/files/' + id,
