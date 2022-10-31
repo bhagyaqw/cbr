@@ -12,6 +12,12 @@ define(['jquery', 'vex', 'vexDialog', 'animateCSS'], function($, vex, vexDialog)
               location.href = '/';
             },
             error: function(xhr, status, error) {
+              define(['jquery', 'tooltip'], function($) {
+  console.log('Loading detail text for a document.');
+
+  $('.entity').tooltip();
+
+});
               console.log(status, error);
             }
           });
